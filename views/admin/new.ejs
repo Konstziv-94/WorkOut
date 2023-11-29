@@ -1,0 +1,45 @@
+<%  layout('layout/dashboard') -%>
+<%- include('../partial/admin-nav')%>
+<%- include('../partial/flash') %>
+
+<div class="container">
+    <div class="card-wrapper">
+        <div class="card mb-3 mt-3" style="max-width: 500px;">
+            <div class="card-body">
+                <h5 class="card-title">New User:</h5>
+                <form method="POST" action="/admin/users/new">
+                    <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text"  class="form-control" name="user[username]" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="user[password]" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="user[email]">
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Grade</label>
+                        <input type="text" class="form-control" id="grade" name="user[sex]">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <input type="text" class="form-control" id="role" name="user[role]" >
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" min="16" max="80" class="form-control" id="age" name="user[age]">
+                    </div>
+                    
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a type="button" class="btn btn-secondary" href="/admin/users">Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,50 @@
+<%  layout('layout/dashboard') -%>
+<%- include('../partial/admin-nav')%>
+<%- include('../partial/flash') %>
+
+
+        
+<div class="container" id="admin-blog">
+
+   <h1>Blogs</h1>
+  <a href="/admin/blogs/new" class="btn btn-primary mb-3">Make new Blog</a>
+    
+  <div class="table-responsive">
+      <table class="table table-bordered table-striped mb-4">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Text</th>
+            <th scope="col">Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% for (let blog of blogs) {%> 
+            <th scope="row"><%= blog.id %> </th>
+            <td><%= blog.title %> </td>
+            <td><%=blog.text%></td>
+            <td><%= blog.image %> </td>
+            <td><a class="btn btn-secondary" type="button" href="/admin/blogs/<%= blog.id %>">Edit</a></td>
+                      <form action="/admin/blogs/<%= blog.id %>/delete?_method=DELETE" method="POST">
+                        <!-- gia na kanw delete kai apo to cloudinary prepei na valw sto value to filename pou exw kanei save sto DB -->
+                          <td><button class="btn btn-danger" href="/admin/users" name="imgDelete" value="<%= blog.filename%>">Delete</button></td>
+                      </form>
+          </tr>
+
+          <% } %> 
+        </tbody>
+      </table>
+    
+    
+    
+
+</table>
+
+
+
+
+</div>

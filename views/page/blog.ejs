@@ -1,0 +1,27 @@
+<%  layout('layout/boilerplate') -%>
+ <div class="blog-back">
+    
+    
+
+            <div class="container">
+                <div class="row">
+                    <% for (let blog of blogs) { %>    
+                            <div class="blog-col col-lg-4 col-md-4 col-sm-4 mb-3 mt-3">
+                                <div id="card-blog" class="card">
+                                    
+                                      <img src="<%= blog.image %>" class="card-img-top" alt="blog-img">
+                                   
+                                    <div class="card-body card-blog-body" id="card-body-blog">
+                                    <h4 class="card-title"><%= blog.title  %></h4>
+                                    <p class="card-text"><%= blog.text.substring(0,70)+"..." %> <a href="/blog/<%= blog._id %> ">Read more</a></p>
+                                    </div>
+                                </div>
+
+                            </div>            
+                    <% } %>   
+                 </div>
+                 
+            </div>
+            
+  
+</div> 

@@ -1,0 +1,47 @@
+<%  layout('layout/boilerplate') -%>
+
+
+    <section id="top-login">
+        <%- include('../partial/flash') %> 
+       
+        </div>
+        <div  id="login-wrapper">
+            <div class="grid-wrapper">
+                
+                    <div class="form-grid">
+                            <div class="" id="form-col">
+                                <div id="cardlg" class="card" >
+                                    <div class="card-body">
+                                        <form class="form-signin" id="form-log" action="/login" method="POST" class="validated-form" novalidate>
+                                            <h3>Login Now :</h3>
+                                            <label for="">Username :</label>
+                                            <input type="text" class="form-control" name="username" placeholder="Username" style="width: 200px;" required>
+                                            <label for="">Password :</label>
+                                            <input type="password" class="form-control" name="password" placeholder="Password" style="width: 200px;" required>
+                                            <button class="btn btn-primary mt-3 btn-block" type="submit">Submit</button>
+                                            <!-- <a class="btn btn-info mt-3" type="button" href="/register">Make new acount</a> -->
+                                        </form>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="" id="button-position">
+                                
+                                <div class="button-wrapper">  
+                                    <a id="button-log" class="btn btn-danger btn-md btn-block" href="/auth/google" role="button">
+                                        <i class="fab fa-google"></i>
+                                        Sign In with Google
+                                    </a>
+                                    <!-- <a id="button-log" class="btn btn-primary btn-md btn-block" href="/auth/facebook" role="button">
+                                        <i class="fab fa-facebook"></i>
+                                        Sign In with facebook
+                                    </a> -->
+                                </div>
+                                
+                            
+                            </div>
+                    </div>
+                </div>
+            </div>    
+    </section>

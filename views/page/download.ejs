@@ -1,0 +1,175 @@
+<% layout('layout/boilerplate') -%>
+<%- include('../partial/flash') %>
+
+
+<section class="download">
+    <div class="wrap-download">
+        <h2>Your program is</h2>
+     <!-- table-responsive -->
+        <table id="program-table" class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">exercise</th>
+                <th scope="col">Arms</th>
+                <th scope="col">Abs</th>
+                <th scope="col">Legs</th>
+                <th scope="col">Chest</th>
+                <th scope="col">Back</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                
+                <th scope="col">day1</th>
+                
+                    <% for (let d of fDay) {%>
+                        <th scope="col">
+                            <%= d %>
+                         <%=  programType %>
+                        </th>
+                        <% }  %>
+                        
+                </th>
+
+                
+            </tr>
+
+            <tr>
+                
+                <th scope="col">day2</th>
+
+                <% for (let s of sDay) {%>
+                    <th scope="col">
+                        <%= s %>
+                        <%=  programType %>
+                        <% }  %>
+                    </th>
+
+            </tr>
+             <tr>
+                <th scope="col">day3</th>
+                <% for(let t of tDay) { %>
+                    <th scope="col">
+                        <%= t %>
+                        <%=  programType %>
+                    </th>
+
+    
+                <% } %>
+             </tr>
+             <tr>
+                <th scope="col">day4</th>
+               
+                    <% for(let four of fourDay) { %>
+                        <th scope="col">
+                            <%= four %>
+                            <%=  programType %>
+                        <% } %> </th>
+                 
+             </tr>
+             <tr>
+                <th scope="col">day5</th>
+                <% for(let fif of fifDay) { %>
+                    <th scope='col'>
+                        <%= fif %> 
+                        <%=  programType %>
+                        
+                     </th>
+                <% } %>
+                    
+             </tr>
+             <tr>
+                <th scope="col">day6</th>
+                <% for(let six of sixDay) { %>
+                    <th scope="col">
+                        <%= six %>
+                        <%=  programType %>
+                    </th>
+                 <% } %>
+             </tr>
+                
+           
+            </tbody>
+          </table>
+
+
+   </div>
+</section>
+
+
+
+
+
+<!-- 
+        <div class="day1">     
+           
+            <h4>Day1</h4>
+
+            <% for (let d of fDay) {%>
+            
+            
+                <p><%= d %></p> 
+            
+            <% }  %>
+        </div>
+
+        <div class="day1">     
+           
+            <h4>Day2</h4>
+          
+            <% for(let s of sDay) { %>
+                
+                <p><%= s %> </p>
+
+            <% } %>
+
+        </div>
+
+        <div class="day1">     
+           
+            <h4>Day3</h4>
+          
+            <% for(let t of tDay) { %>
+                
+                <p><%= t %> </p>
+
+            <% } %>
+             
+        </div>
+
+        <div class="day1">     
+           
+            <h4>Day4</h4>
+          
+            <% for(let four of fourDay) { %>
+                
+                <p><%= four %> </p>
+
+            <% } %>
+             
+        </div>
+        
+        <div class="day1">     
+           
+            <h4>Day5</h4>
+          
+            <% for(let fif of fifDay) { %>
+                
+                <p><%= fif %> </p>
+
+            <% } %>
+             
+        </div>
+
+        <div class="day1">     
+           
+            <h4>Day6</h4>
+          
+            <% for(let six of sixDay) { %>
+                
+                <p><%= six %> </p>
+
+            <% } %> -->
+             
+        </div>

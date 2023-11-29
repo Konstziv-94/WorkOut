@@ -1,0 +1,47 @@
+<%  layout('layout/dashboard') -%>
+<%- include('../partial/admin-nav')%>
+<%- include('../partial/flash') %>
+<div class="container" id="admin-user">
+    <h1>Users</h1>
+    <a href="/admin/users/new" class="btn btn-primary mb-3">Make new user</a>
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped mb-4" >
+        <thead>
+          <tr>
+            
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Grade</th>
+            <th>Age</th>
+            <th>Role</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          
+
+          </tr>
+        </thead>
+        <tbody>
+            <% for (let user of users) {%> 
+            <tr>
+                
+                    <td><%= user.id%></td>
+                    <td><%= user.username%></td>
+                    
+                    <td><%= user.email%></td>
+                    <td><%= user.sex%></td>
+                    <td><%= user.age %> </td>
+                    <td><%= user.role%></td>
+                    <td><a class="btn btn-secondary" type="button" href="/admin/users/<%= user._id %>">Edit</a></td>
+                      <form action="/admin/users/<%= user._id %>/delete?_method=DELETE" method="POST">
+                          <td><button class="btn btn-danger" href="/admin/users">Delete</button></td>
+                      </form>
+            </tr>
+           
+            <% } %> 
+         </tbody>
+      </div>
+
+
+
+</div>

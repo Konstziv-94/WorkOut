@@ -1,0 +1,26 @@
+<%  layout('layout/dashboard') -%>
+<%- include('../partial/admin-nav')%>
+
+<section class="wrap-exer">
+    <div class="exer">
+        <form action="/admin/exercise" method="POST">
+            <div class="form-group">
+                <label for="body-exercise">BODY</label>
+                <select class="form-control m-auto" id="body-exercise" name="body">
+                    <option value="back">back</option>
+                    <option value="abs">abs</option>
+                    <option value="arms">arms</option>
+                    <option value="legs">legs</option>
+                    <option value="chest">chest</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name-exer">NAME</label>
+                <input class="form-control m-auto" type="text" id="name-exer" name="name">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>

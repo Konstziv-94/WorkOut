@@ -1,0 +1,98 @@
+<%  layout('layout/boilerplate') -%>
+
+
+
+   
+        <section class="home-first">   
+                <%- include('../partial/flash') %> 
+                        
+                        <div class="wrap-container">
+                                <div class="text-wraper">
+                                                <h3>Welcome to My Work app</h3>
+                                                <p>My work routine app is a web application for users to make
+                                                your workout for gym or to your home with equipment or not equipment
+                                                </p>
+                                                <a class="btn btn-info" href="/register" role="button">Make your Acount</a>
+                                </div>
+                                
+                        </div>   
+        </section>
+             
+        <section class="home-second">      
+                <div class="goals-wrap">
+                        
+                        <div class="row" id="row">
+                          <div class="goals-box col-sm-4">
+                            <i class="icon fas fa-check-circle fa-4x"></i>
+                            <h3 class="goals-title">Learn about </h3>
+                            <p>How to achieve your goals in gym!!</p>
+                          </div>
+                    
+                    
+                    
+                          <div class="goals-box col-sm-4">
+                            <i class="icon fas fa-bullseye fa-4x"></i>
+                            <h3 class="goals-title">Work with the best Coach</h3>
+                            <p>Live the best experience!!</p>
+                          </div>
+                    
+                    
+                    
+                          <div class="goals-box col-sm-4">
+                            <i class="icon fas fa-heart fa-4x"></i>
+                            <h3 class="goals-title">Love your Self</h3>
+                            <p>Build the best part of your self!!</p>
+                          </div>
+                        </div>
+                        </div>
+                       
+        </section> 
+        <section class="home-third">
+                <div class="blog-wrap">
+                        <div class="blog-text">
+                                 <h4>Learn more about training</h4>
+                                <p>In our blog section you can read all our blogs
+                                and learn more about training and how to do the best
+                                in your workout.        
+                                </p>
+                                <a class="btn btn-info" href="/blog" role="button">Read all blogs</a> 
+                        </div>
+                       
+                </div>
+        </section>
+        <section class="home-fourth">
+                <div class="form-wrap">
+                        <form id="home-form" class="home-form validated-form" novalidate>
+                                <h3 class="form-header">Contact Us:</h3>
+                                <div class="for-group">
+                                        <label for="subject">Subject</label>
+                                        <input class="form-control" type="text" id="subject" placeholder="Subject" required/>
+                                </div>
+                                <div class="text-danger subjectError">
+                                        Subject must have more than 4 characters.
+                                    </div>
+                                    <div class="text-success subjectSucces">
+                                        Looks good
+                                    </div>
+                                <div class="form-group">
+                                        <label for="form-home">Email:</label>
+                                        <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                                </div>
+                                <div class="text-danger emailContError">
+                                       Not Valid Email.
+                                </div>
+                                    <div class="text-success emailContSucces">
+                                        Valid Email.
+                                    </div>
+                                <div class="form-group">
+                                        <label for="form-text">Comment:</label>
+                                        <textarea class="form-control" id="text" rows="3" placeholder="comment" required></textarea>
+                                        <div class="text-danger textError">Your message must be less than 250 characters</div>
+                                        <div class="textSucces"></div>
+                                </div>
+                               
+                                <button disabled type="submit" id="contact-btn" class="btn btn-block btn-secondary">Submit</button>
+                        </form>
+                </div>
+        </section>       
+        

@@ -1,0 +1,83 @@
+<%  layout('layout/boilerplate') -%>
+
+
+<section class="top-register">
+    <%- include('../partial/flash') %> 
+    <div class="grid-register" >
+          
+                    <div class="register-form">
+                        <form action="/register" method="POST" class="validated-form" novalidate>
+                            <div class="mb-3">
+                                <label class="form-label" for="username">Username :</label>
+                                <input class="form-control" type="text" id="username" placeholder="Username" name="username" required>         
+                            </div>
+                            <div class="text-danger usernameError">
+                                Username must have more than 4 characters.
+                            </div>
+                            <div class="text-success usernameSucces">
+                                Looks good
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="password">Password :</label>
+                                <input class="form-control" type="password" id="password" placeholder="Password" name="password" required>
+                                
+                            </div>
+                            <div class="text-danger passError">
+                                <p>Must have 4 characters and not be empty</p>
+                            </div>
+                            <div class="text-success passSuccess">
+                                <p>Looks good</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="email">Email :</label>
+                                <input class="form-control" type="email" id="email" placeholder="Email" name="email" required>
+                              
+                            </div>
+                            <div class="text-danger emailError">
+                                <p>Is not email</p>
+                            </div>
+                            <div class="text-success emailSucces">
+                                <p>Looks good</p>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sex" id="male" value="male" required>
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sex" id="female" value="female" required>
+                                    <label class="form-check-label" for="Female">Female</label>
+                                </div>
+                                
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="birthday">Age :</label>
+                                <input class="form-control" type="number" id="age" name="age" min="16" max="80" placeholder="Age" required>
+                                
+                            </div>
+                            <div class="text-danger ageError">
+                                <p>Age between 18-79</p>
+                            </div>
+                            <div class="text-success ageSucces">
+                                <p>Looks good</p>
+                            </div>
+                            <button disabled id="register-btn" class="btn btn-block btn-primary" type="submit">Submit</button>
+                        </form>
+                    </div>    
+           
+            <div class="button-register mb-3">
+                <div class="">    
+                    <a  class="btn btn-danger btn-block mt-3" href="/auth/google" role="button">
+                        <i class="fab fa-google"></i>
+                        Sign In with Google
+                    </a>
+
+                    <!-- <a id="button-log" class="btn btn-primary btn-block" href="/auth/facebook" role="button">
+                        <i class="fab fa-facebook"></i>
+                        Sign In with facebook
+                    </a> -->
+                </div>
+            </div>
+        
+    </div>
+</section>

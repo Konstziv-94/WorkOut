@@ -1,0 +1,19 @@
+
+<%  layout('layout/dashboard') -%>
+
+<div id="login-admin" class="text-center">
+
+
+<form class="form-sig" action="/admin/login" method="POST" class="validated-form" novalidate>
+  <%- include('../partial/flash') %> 
+    <h1 class="h3 mb-3 font-weight-normal">Adming panel</h1>
+    
+    <input type="email" id="admin" class="form-control" placeholder="Admin Username" name="username" required autofocus>
+   
+    <input type="password" id="adminpassword" class="form-control" placeholder="Password" name="password" required>
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    
+    <p class="mt-5 mb-3 text-muted">&copy;2021</p>
+  </form>
+</div>
